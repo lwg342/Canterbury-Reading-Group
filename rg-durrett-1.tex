@@ -1,0 +1,219 @@
+\subsection{Measure and Probability Spaces}
+First of all, why should we discuss measure theory. It's for a better integration theory than the usual Riemann integral. Because we need strong conditions for arguments like:
+\begin{equation*}
+    \lim_{n} \int f_{n} = \int \lim_{n} f_{n}
+\end{equation*}
+to hold for Riemann integral. \yellow{Relationship with Riemann Integral} We'll talk about
+\begin{enumerate}
+    \item Measure space, construction of measure, Lebesgue measures;
+    \item Integration theory
+    \item Convergence concepts 
+    \item Differentiation 
+\end{enumerate}
+
+Let's start with an abstract measure space. Let \(\Omega\) be a space. A \(\sigma\)-algebra \(\mathcal{F}\) is a collection of subsets called \key{measurable sets} of \(\Omega\) such that it's closed under complements and countable unions. Also the \(\emptyset \in \mathcal{F}\). We can assign \key{measure} \(\mu\) to members in \(\mathcal{F}\). The reason we need to restrict attention from the power set to \(\mathcal{F}\) is that there are examples that violate some properties we want a measure to have. \(\mu\) satisfies:
+\begin{equation*}
+    \mu\pqty{\emptyset} = 0 \qq{and} \mu \pqty{\sqcup_{i}^{\infty} A_{i}} = \sum_{i} \mu(A_{i}) \qq{for} (A_{i}) \subset \mathcal{F}
+\end{equation*}
+The triplet \((\Omega, \mathcal{F}, \mu)\) is called a \key{measure space}.  
+
+A \key{measurable function} is \(X : (\Omega, \mathcal{F}, \mu) \to \pqty{S, \mathcal{H}}\) such that for all \(H \in \mathcal{H}\), \(X^{-1}(H) \in \mathcal{F}\). Meaning that we can assign a measure to the subsets of \(\mathcal{H}\) based on the measure \(\mu\) and \(X\). 
+Given two measurable spaces, we can check whether a function \(X\) is measurable. 
+
+\begin{lemma}
+    Suppose \(\mathcal{H} = \sigma(\mathcal{G})\), if for all \(B \in \mathcal{G}\), \(X^{-1} (B) \in \mathcal{F}\), then \(X \) is measurable. 
+\end{lemma}
+\begin{proof}
+    Let \(\mathcal{H}' = \Bqty{B\subset S\mid X^{-1}(B) \in \mathcal{F}}\), then we can show \(\mathcal{H}'\) is a \(\sigma\)-algebra because \(X^{-1}\) preserves complements and union. Then we have \(\mathcal{G} \subset \sigma(\mathcal{G}) = \mathcal{H} \subset \mathcal{H}'\), meaning that all \(H\in \mathcal{H}\) satisfies the condition.
+\end{proof}
+
+A measure space is a \key{probability space} if \(\mu =1\), we write it as \((\Omega, \mathcal{F}, P)\). A random variable/vector is a measurable function on probability space \(X: \Omega \to \mathbb{R}/\mathbb{R}^{d}\) with the Borel \(\sigma\)-algebra.
+
+\subsubsection{Distribution and Density}
+
+\key{Distribution} is the probability induced by a random variable \(X\), such that \(\mu(A) = P\pqty{X \in A}\). \key{Density} is defined via some methods(\yellow{To be added}). Its use is:
+\begin{equation*}
+    \int g(X) \dd{P} = \int g(x)f(x)\dd{x}
+\end{equation*}
+
+\subsubsection{Check for Measurability of Random Variables}
+
+For random variables \(X_{n}, Y_{n}\), \(X_{n} +Y_{n}\) and \(\sup X_{n}\) are measurable. 
+
+
+\subsection{Construction of Measures}
+
+\subsubsection{Motivation}
+Now we want to show that we can actually find measure on \(\mathbb{R}\) and \(\mathbb{R}^{d}\) that are the most useful spaces. We start from abstract construction method inspired by the following observation of measure on \(\mathbb{R}\).
+
+In order to have a natural measure \(\lambda\) on \(\mathbb{R}\), we want the following properties:
+\begin{enumerate}
+    \item \(\lambda_{0} \linterval{a}{b} = b - a \);
+    \item Measure of union of intervals should be the sum;(we can't have uncountable sum, hence restricted to countable union)
+    \item Apply to all intervals(we can't apply to the power set, hence restrict to the measurable sets).
+\end{enumerate}
+
+Now consider the set \(\mathcal{S}_{\mathbb{R}} = \Bqty{\linterval{a}{b} : a\leq b \in \mathbb{R}}\), it's too small, we want to extend the natural measure funtion \(\lambda_{0}\) to a larger set(we can extend to \(\mathcal{B}_{\mathbb{R}}\), even to \(\mathcal{L}_{\mathbb{R}}\)). 
+
+
+\key{Semi-algebra} \(\mathcal{S}\) is collection of subsets of a space \(\Omega\) that satisfies the following conditions: closed under intersection and the complements are union of finite disjoint sets in \(\mathcal{S}\). Let \(\mu_{0}\) be a what I call \key{semi-pre-measure} to ({\key{algebra}, \key{premeasure}}) to (outer-measurable sets, outer measure) to ({sigma-algebra, measure}) where the \key{semi-pre-measure} \(\mu_{0}\) satisfies if both \(S_{N} = \sqcup^{N}S_{j}, S_{\infty} = \sqcup^{\infty}S_{j} \in \mathcal{S}\)
+\begin{equation*}
+    \mu_{0}(\emptyset) = 0 ; \quad \mu_{0}\pqty{S_{N}} = \sum^{N} \mu_{0}S_{j}; \quad  \mu_{0}\pqty{S_{\infty}} \leq \sum^{\infty} \mu_{0}S_{j}
+\end{equation*} 
+
+We follow the steps of extension
+\begin{equation*}
+    (\mathcal{S}, \mu_{0}) \to (\mathcal{A}, \mu_{1}) \to (\mathcal{M}, \mu^{*}) \to (\sigma(\mathcal{S}), \mu)
+\end{equation*}
+that is semi-algebra and 
+\key{pre-measure} \(\mu_{1}\) satisfies \(\mu_{1}\sqcup_{i}^{\infty} A_{i} = \sum_{i}^{\infty} \mu_{1} A_{i}\) as long as the union is also in \(\mathcal{A}\). And we will show that \(\mathcal{B}_{\mathbb{R}} \subset \sigma(\mathcal{S})\). 
+
+\subsubsection{Construction of Abstract Measure}
+
+\begin{thm}[\( (\mathcal{S}, \mu_{0}) \to (\mathcal{A}, \mu_{1}) \)]
+    We have that \(\mathcal{A} = \Bqty{\bigsqcup^{N}_{j} S_{j} : S_{j} \in \mathcal{S}}\) is an algebra. And \(\mu_{1}(A) = \sum^{N}_{j} \mu_{0} S_{j}\) is a premeasure. 
+\end{thm}
+
+\begin{proof}
+    \(\mu_{1}(\emptyset) = 0\). Suppose \(A = \sqcup^{\infty} A_{i} \in \mathcal{A}\), then \red{there exists} \(T_{l}\in \mathcal{S}: l = 1,\dots N_T\), such that \(A = \sqcup_{l} T_{l}\), also for each \(A_{j} = \sqcup^{N_{j}}_{k} S_{j,k}\). 
+\end{proof}
+
+Let an \key{outer measure} be a function over the power set such that:
+\begin{equation*}
+    \mu^{*}(\emptyset)= 0 \qq{and} \mu^{*}\pqty{\sqcup^{\infty} A_{j}}\leq \sum_{j} \mu^{*} A_{j} \qq{and} \mu^{*}(A) \leq \mu^{*}(B)  \qq{for} A \subset B
+\end{equation*}
+
+Also let \(\mathcal{M}\) be the \key{outer-measurable sets}, that is the collections of \(A\) such that 
+\begin{equation*}
+    \mu^{*} (E) = \mu^{*}(E\cap A) + \mu^{*} (E\cap A^{c}) \qq{for all} E \subset X
+\end{equation*}
+
+\begin{thm}[\((\mathcal{A}, \mu_{1}) \to (\mathcal{M}, \mu^{*})\) Caratheodory's Theorem applied to premeasures]
+    We can find the outer measure induced by \(\mu_{1}\): 
+    \begin{equation*}
+        \mu^{*}_{1}(B) = \inf\Bqty{\sum^{\infty}_{j} \mu_{1} A_{j}: B \subset \cup_{j}A_{j}}
+    \end{equation*}
+    we show \(\mu^{*}_{1}\) is indeed an outer measure, Caratheodory states that for outer measures, \(\mathcal{M}\) of \(\mu^{*}_{1}\) is a \(\sigma\)-algebra and \(\mu^{*}|_{\mathcal{M}}\) is complete. 
+\end{thm}
+\begin{proof}
+    \begin{summary}[1]
+        Monotone property is easy, for countable subadditivity, we use \(\epsilon\)-room method, find a cover \(C_{jk}\) of \(A_{j}\) such that :
+        \begin{equation*}
+            \mu^{*}_{1}(A_{j}) > \sum_{k} \mu^{*}_{1}C_{jk} - \epsilon
+        \end{equation*}
+    \end{summary}
+    \begin{summary}[2]
+        To show that \(\mathcal{M}\) is a \(\sigma\)-algebra we only need to show that for \(E_{j} \in \mathcal{M}\) and any \(B \subset \Omega\), we have:
+        \begin{equation*}
+            \mu^{*} (B ) \geq \mu^{*} \pqty{B \cap E} + \mu^{*} \pqty{B \cap E}
+        \end{equation*}
+        which can be seen by considering finite sum, taking out one \(E_{j}\) at a time and then take limit. 
+    \end{summary}
+    \begin{summary}[3]
+        Show that the restriction is complete.
+    \end{summary}
+\end{proof}
+
+
+\begin{thm}[\((\mathcal{M}, \mu^{*}) \to (\sigma(\mathcal{S}), \mu)\)]
+    We can restrict \(\mu^{*}\) to define \(\mu= \mu^{*}|_{\sigma\pqty{\mathcal{S}}}\), and the resulting measure is complete. 
+\end{thm}
+
+\begin{proof}
+    We show that \(\sigma\pqty{\mathcal{S}}\subset \mathcal{M}\) and the restriction is complete. 
+\end{proof}
+
+\subsection{Application: Borel and Lebesgue-Stietjes Measure on \tmath{\mathbb{R}}}
+
+We verify that for any nondecreasing right-continuous function \(F: \mathbb{R}\to \mathbb{R}\), the semi-algebra \(\mathcal{S}_{\mathbb{R}}\) together with the semi-pre-measure defined by 
+\begin{equation*}
+    \lambda_{0} \linterval{a}{b} = F(b) - F(a)
+\end{equation*}
+satisfies the conditions set in the previous section. \(\mathcal{A}_{\mathbb{R}}\) be the algebra generated by \(\mathcal{S}_{\mathbb{R}}\) in turn will generate \(\mathcal{B}_{\mathbb{R}}\). We can extend it to a something larger, a complete measure whose domain contains \(\mathcal{B}_{\mathbb{R}}\). It will be called the \key{Lebesgue-Stietjes measure} and \key{Lebesgue measurable sets} \(\mathcal{M}_{\lambda}\). The restriction on \(\mathcal{B}\) is called \key{Borel measure}. It's just the completion.  
+
+\begin{thm}[Regularity of \(\mathcal{M}_{\lambda}\)]
+    Lebesgue measurable sets are of simple form if you allow for a small error.
+
+    \begin{enumerate}
+        \item \(\lambda(A) = \inf\Bqty{\lambda U:  A \subset U, U  \text{ is open}} = \sup\Bqty{\lambda K : K \subset A, K \text{ is compact}}\)
+        \item \(A = G_{\delta} \setminus N_{1}= F_{\sigma} \cup N_{2}\) where \(N\) are null sets.  
+        \item Littlewood's First Principle: Suppose \(\lambda(A) < \infty\) then for all \(\epsilon > 0\), there exists \(B\) that is a finite union of open intervals such that \(A \triangle B < \epsilon\). 
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    
+\end{proof}
+
+
+\subsection{Integration}
+
+Integration and measure are the two sides of same coin: integration is the generalization of measure from the space of \key{indicator functions} \(\mathbf{1}_{A}\) of measurable sets to a larger set of functions. 
+
+For \key{simple functions} \(f_{s} = \sum^{N}_{j} \mathbf{1}_{A_{j}}\), we can define \(\mu f_{s} = \sum^{N}_{j} \mu(A_{j})\)
+
+
+Then for \key{nonnegative measurable} functions \(f\), we can define 
+\begin{equation*}
+    \mu f = \sup \Bqty{\mu f_{s} : f_{s} \leq f \quad \text{pointwise}}
+\end{equation*}
+
+If \(f = f^{+} - f^{-}\) and the integrals of two nonnegative parts are not \(\infty\), then we say \(f\) is \key{integrable} or in \({L}^{1}\) and \(\mu f = \mu f^{+} - \mu f^{-}\).  
+
+\begin{thm}[Littlewood's Second Principle]
+    Measurable and integrable functions can be approximated by simple well-behaved functions.   
+\end{thm}
+\begin{thm}[Properties of Integral]
+    \begin{enumerate}
+        \item Monotone \(\mu f \leq \mu g\) if \(f \leq g\) pointwise.
+        \item Linearity for \(a > 0\), \(\mu (af) = a \mu f\), \(\mu(f + g)=  \mu f + \mu g\).
+        \item Monoton Convergence: if \(0 \leq f_{n} \uparrow f\) a.e., then \(\mu f_{n} \uparrow \mu f\). 
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    Folland proves by choosing simple function and a scaling factor \(\alpha\). Tao's proof is essentially the same.
+    PTE proves via Fatou's lemma. 
+    
+    Suppose \(f_{n}\uparrow f\) a.e., if \(\mu f\) exists, we know \(\mu f_{n}\) must converge because it's a nondecreasing bounded sequence of numbers. Also \(\mu f_{n} \leq \mu f\) by monotonicity. 
+
+    To show that \(\mu f \leq \lim_{n} \mu f_{n}\), where \(\mu f = \sup \Bqty{\mu g: g \text{ is simple}, g \leq f}\), we only need to show that for all simple \(g \leq f\), we have \(\mu g \leq \mu f_{n}\). We can use \(\epsilon\)-room method, let \(E_{n} = \Bqty{\omega: f_{n} \geq (1 - \epsilon) g}\), \(E_{n} \uparrow \Omega\), and we have \(\int f_{n} \geq \int_{E_{n}} (1 - \epsilon)g\), taking \(\lim\), we have \(\lim \int f_{n} \geq (1 - \epsilon) \int g\) for all \(\epsilon> 0\). 
+\end{proof}
+
+
+\begin{remark}
+    These three properties fully characterise the integral. That is given a functional that satisfies the three properties we can find a measure for which the function is the integral. 
+\end{remark}
+
+\begin{thm}[Inequalities and Controls]
+    Useful inequalities and controls
+    \begin{enumerate}
+        \item Jensen's inequality: suppose we have a convex function \(\Phi(x)\), then \(\mu\pqty{\Phi(f)} \geq \Phi \mu f\)
+        \item Holder's inequality. For \(p,q: \frac{1}{p} + \frac{1}{q} = 1\), we have \(\norm{fg}_{1} \leq \norm{f}_{p} \norm{g}_{q}\)
+        \item Minkowski's inequality: \(\norm{f + g}_{p} \leq \norm{f}_{p} + \norm{g}_{p}\).
+        \item Chebyshev's Inequality: 
+        \item For nonnegative measurable functions, \(\mu f < \infty  \implies f < \infty\) a.e., \(\mu f = 0\) implies \(f = 0\) a.e. 
+        \item Moment and tail behaviour, if \(\mu\) is finite, 
+        \begin{equation*}
+            \mu f^{r} < \infty \implies \sum x^{r - 1} \mu(f> x) < \infty
+        \end{equation*}
+
+    \end{enumerate}    
+\end{thm}
+
+\subsection{Countable Product Space and Lebesgue Measure on \tmath{\mathbb{R}^{d}}}
+
+\key{Product measurable} and \key{product measure}. 
+\begin{thm}[Fubini-Tonelli]
+
+\end{thm}
+
+\subsection{Convergence Concepts}
+
+\begin{thm}[Monotone, Fatou and Dominated Convergence]
+    
+\end{thm}
+
+\begin{thm}[Uniform Integrability]
+    
+\end{thm}
+
+\subsection{Differentiation}
