@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'Probability Notes.blg'
+[76] biber-darwin:322> INFO - === Sun Nov 22, 2020, 12:42:51
+[90] Biber.pm:415> INFO - Reading 'Probability Notes.bcf'
+[179] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[184] Utils.pm:304> WARN - The file 'Probability Notes.bcf' does not contain any citations!
+[192] bbl.pm:652> INFO - Writing 'Probability Notes.bbl' with encoding 'UTF-8'
+[192] bbl.pm:755> INFO - Output to Probability Notes.bbl
+[193] Biber.pm:128> INFO - WARNINGS: 1
