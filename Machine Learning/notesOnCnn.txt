@@ -1,0 +1,17 @@
+CNN
+
+linear mapping with filters
+* equivalent to sparse matrix with shared weights
+ - dimension: same as data
+ - nb
+ - stride
+ - padding
+ - dilation
+
+activation
+* same as DNN
+
+pooling
+* handle input of different size
+* no para to learn
+ - size
