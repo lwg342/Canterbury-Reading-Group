@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber Probability Notes"] 1606048970 "Probability Notes.bcf" "Probability Notes.bbl" "Probability Notes" 1606055385
-  "Probability Notes.bcf" 1606055385 101280 b10b97f25750e34f054711b0c76d6e9a "pdflatex"
+["biber Probability Notes"] 1606048970 "Probability Notes.bcf" "Probability Notes.bbl" "Probability Notes" 1606057026
+  "Probability Notes.bcf" 1606057025 101280 b10b97f25750e34f054711b0c76d6e9a "pdflatex"
   (generated)
-  "Probability Notes.bbl"
   "Probability Notes.blg"
-["pdflatex"] 1606055384 "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.tex" "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.pdf" "Probability Notes" 1606055385
-  "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.aux" 1606055385 7964 4f0a3c372294e76b938b1966dd1fb5e6 ""
+  "Probability Notes.bbl"
+["pdflatex"] 1606057024 "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.tex" "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.pdf" "Probability Notes" 1606057026
+  "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.aux" 1606057025 8196 8d92ef041bdc2edcb7632305ac66a6fd ""
   "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.tex" 1606048977 646 72e894d8d3c5f1d62f11bdfd45da282a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_674lrv.enc" 1576624121 2961 198d44374ea7f2d8973ce079c9b798b9 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/libertinus-type1/lbts_oaaihm.enc" 1576624121 2959 e355b0c607576c987be454b71121ad70 ""
@@ -256,21 +256,21 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1588345490 2432461 575b0bbb6fb74c6a7564a9a68c59554a ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   "/usr/local/texlive/texmf-local/tex/latex/local/mybook/mybook.sty" 1605714518 5563 4558712d4ab88f38b45f6fd86fd8f8d9 ""
-  "Probability Notes.aux" 1606055385 7964 4f0a3c372294e76b938b1966dd1fb5e6 "pdflatex"
+  "Probability Notes.aux" 1606057025 8196 8d92ef041bdc2edcb7632305ac66a6fd "pdflatex"
   "Probability Notes.bbl" 1606048971 466 f7f239c736cf01ac6ce7bd829f9b3c7b "biber Probability Notes"
-  "Probability Notes.out" 1606055385 986 4fd1bf12086a8ed43628d28bfc8f3622 "pdflatex"
-  "Probability Notes.run.xml" 1606055385 2409 9d43378c228f8b07647d79bb6bb6e40a "pdflatex"
+  "Probability Notes.out" 1606057025 986 130f80a3df293626a3ee8422329ff2f2 "pdflatex"
+  "Probability Notes.run.xml" 1606057025 2409 9d43378c228f8b07647d79bb6bb6e40a "pdflatex"
   "Probability Notes.tex" 1606048977 646 72e894d8d3c5f1d62f11bdfd45da282a ""
-  "Probability Notes.toc" 1606055385 2328 88871d832aaf12f2318aae98079ed4ba "pdflatex"
-  "rg-durrett-1.tex" 1606055383 14143 ed9bd359fa790558daed37fc77994c77 ""
+  "Probability Notes.toc" 1606057025 2328 e2f71c6e957510fe06c6a8f074abbe66 "pdflatex"
+  "rg-durrett-1.tex" 1606057023 14499 287a3a2dad05b527aa4a8c811a7725b0 ""
   "rg-independence.tex" 1605819892 96 d3a51e29e50b0d722651c2d415b2af4e ""
   (generated)
-  "Probability Notes.out"
   "Probability Notes.pdf"
-  "Probability Notes.toc"
-  "Probability Notes.aux"
-  "Probability Notes.bcf"
   "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.log"
-  "Probability Notes.run.xml"
+  "Probability Notes.toc"
   "Probability Notes.log"
+  "Probability Notes.aux"
   "/Users/lwg342/OneDrive - University of Cambridge/Study/Notes/Canterbury Reading Group/Probability/Probability Notes.pdf"
+  "Probability Notes.bcf"
+  "Probability Notes.out"
+  "Probability Notes.run.xml"
