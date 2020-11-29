@@ -200,7 +200,7 @@ If \(f = f^{+} - f^{-}\) and the integrals of two nonnegative parts are not \(\i
     
     Suppose \(f_{n}\uparrow f\) a.e., if \(\mu f\) exists, we know \(\mu f_{n}\) must converge because it's a nondecreasing bounded sequence of numbers. Also \(\mu f_{n} \leq \mu f\) by monotonicity. 
 
-    To show that \(\mu f \leq \lim_{n} \mu f_{n}\), where \(\mu f = \sup \Bqty{\mu g: g \text{ is simple}, g \leq f}\), we only need to show that for all simple \(g \leq f\), we have \(\mu g \leq \mu f_{n}\). We can use \(\epsilon\)-room method, let \(E_{n} = \Bqty{\omega: f_{n} \geq (1 - \epsilon) g}\), \(E_{n} \uparrow \Omega\), and we have \(\int f_{n} \geq \int_{E_{n}} (1 - \epsilon)g\), taking \(\lim\), we have \(\lim \int f_{n} \geq (1 - \epsilon) \int g\) for all \(\epsilon> 0\). 
+    To show that \(\mu f \leq \lim_{n} \mu f_{n}\), where \(\mu f = \sup \Bqty{\mu g: g \text{ is simple}, g \leq f}\), we only need to show that for all simple \(g \leq f\), we have \(\mu g \leq \mu f_{n}\). We can use \(\epsilon\)-room method, let \(E_{n} = \Bqty{\omega: f_{n} \geq (1 - \epsilon) g}\), \(E_{n} \uparrow \Omega\), and we have \(\int f_{n} \geq \int_{E_{n}} (1 - \epsilon)g\), taking \(\lim\) (\yellow{we have yet to show the monotone convergence for simple functions}), we have \(\lim \int f_{n} \geq (1 - \epsilon) \int g\) for all \(\epsilon> 0\). 
 \end{proof}
 
 
@@ -209,7 +209,7 @@ If \(f = f^{+} - f^{-}\) and the integrals of two nonnegative parts are not \(\i
 \end{remark}
 
 \begin{thm}[Inequalities and Controls]
-    Useful inequalities and controls
+    Useful inequalities and controls suppose that 
     \begin{enumerate}
         \item Jensen's inequality: suppose we have a convex function \(\Phi(x)\), then \(\mu\pqty{\Phi(f)} \geq \Phi \mu f\)
         \item Holder's inequality. For \(p,q: \frac{1}{p} + \frac{1}{q} = 1\), we have \(\norm{fg}_{1} \leq \norm{f}_{p} \norm{g}_{q}\)
@@ -222,6 +222,13 @@ If \(f = f^{+} - f^{-}\) and the integrals of two nonnegative parts are not \(\i
         \end{equation*}
     \end{enumerate}    
 \end{thm}
+
+\begin{proof}
+    We prove the above inequalities. 
+    \begin{enumerate}
+        \item First we show that if \(f \in L^{1}\) then \(\Phi(f) \in L^{1} \) as well. 
+    \end{enumerate}
+\end{proof}
 
 
 \begin{thm}[Fubini-Tonelli]
