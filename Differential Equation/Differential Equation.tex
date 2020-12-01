@@ -1,5 +1,9 @@
 \documentclass[12pt,oneside]{book}
-\usepackage{../mybook}\addbibresource{lib.bib}
+\usepackage{../mybook}%\addbibresource{lib.bib}
+
+
+\newtheorem{definition}{Definition}[section]
+
 %--------Hello World--------%
 %=====================================%
 \begin{document}
@@ -9,22 +13,57 @@
     Ref:Chua's Notes; Hirsh and Smale's Book
     \section{From Classic Mechanics to Differential Equations (Dynamical Systems)}
     \yellow{Newton's Equations,Review on solving ODE}
-    
-    \textit{Well understood (Hopefully)}
-    \section{Linear Theory}
     \begin{equation}
     	\dot{x}=Ax
     \end{equation}
-    \yellow{Definition of Vector Space; Subspace; Bases; Linear Operator; Vector V.S. coordinates; Change of coordinates; Decomposition}
+    \textit{Well understood (Hopefully)}
+    \section{Linear Theory}
     
-    \red{My own question: Why introduce the notion of Operator? \\
-    Initial Answer: Linear Map may be associated with different matrix given the change of the bases of the vector space.}
+    \yellow{Vector V.S. coordinates; Change of coordinates; Decomposition}
+    \subsection{Operator}
+    We should be all familiar with the concepts of Vector Space; Subspace; Basis of a vector space, so we will not cover them in details. 
+    Here I want to emphasis on how the vector space structure is defined on $\mathbf{R}^n$ (from Hirsh's book):
+    \begin{definition}[Vector Space 1: addition]
+    	\begin{align*}
+    		&x+y=y+x\\
+    		&x+\mathbf{0}=x\\
+    		&x+(-x)=\mathbf{0}\\
+    		&(x+y)+z=x+(y+z)
+    	\end{align*}
+    Here $x,y,z\in\mathbf{R}^n$, $\mathbf{0}=(0,0,...,0)\in\mathbf{R}^n$
+    \end{definition} 
 
+	\begin{definition}[Vector Space 2: multiplication]
+		\begin{align*}
+			&(\lambda+\mu)x=\lambda x+\mu x\\
+			&\lambda (x+y)=\lambda x+ \lambda y\\
+			&1x=x\\
+			&0x=\mathbf{0}
+		\end{align*}
+	\end{definition} 
+    
+    The addition and multiplication properties are recurring properties in Math, which we all should have learned at a young age!!! They help us get rid of the Cartesian structure (the coordinate) of $\mathbf{R}^n$ by viewing vectors as elements in the set of vector space. My (W.Che) feeling is that such treatment makes more clear, which we will see later. In the rest of this notes, we will denote vector space $E$ for $\mathbf{R}^n$.
+    
+    It follows that we can define an operator( linear map) $A:\mathbf{R}^n\rightarrow\mathbf{R}^n$ that satisfies the linearity properties:\\
+  LS 1: \(A(x+y)=Ax+Ay\)\\
+  LS 2: \(A(\lambda x)=\lambda Ax\)\\
+  where $x,y\in\mathbf{R}^n,\lambda\in R$. The set of all operators on $\mathbf{R}^n$ is denoted as $L(\mathbf{R}^n)$. Given any operator in $L(E)$, we can associate it with a matrix, i.e. the matrix is like a realization of the linear operator for a given coordinates.
+    	
+	\textbf{Why introducing the notion of \textit{Linear Operator}?}
+	\begin{itemize}
+		\item Operator defines a mapping between vector spaces, which is invariant to change of coordinates.
+		\item Given the linearity properties of operator, we can treat it as an element and do algebra on operators. (Linear analysis, functional analysis)
+		\item By contrast, matrices and the associated calculation has different interpretation in different situations. The mapping is also sensitive to change of coordinates.
+	\end{itemize}
 
+\subsection{Change of Coordinate and Decomposition}
+	\begin{definition}[Coordinate system]
+		A \textit{coordinate system} on a vector space $E$ is an isomorphism $\varphi:E\rightarrow\mathbf{R}^n$ ($n=\dim E$). The coordinates of $z\in E$ are $(x_1,x_2,...,x_n)$, where $\varphi(z)=(x_1,x_2,...,x_n)$
+	\end{definition}
+ 	Isomorphism means $\varphi$ is bijective; Two isomorphic vector spaces are in a sense identical.
+	
 	Basic linear algebra knowledge like matrix properties,operations are omitted.
-	
-	
-	\textit{Need to be more familiar and accurate with the concept of operators; Other parts done}
+
 	\section{Linear System}
 	\yellow{How do we find solutions? Technical Chapter; We may skip that if not interested}
 	
@@ -64,4 +103,19 @@
     
     \chapter{PDE}
     Ref: TBD
+    
+%   \bibliographystyle{ieeetr}
+    
+ %   \begin{thebibliography}{10}
+    
+     
+  %  @book{hirsch1974differential,
+   % 	title={Differential equations, dynamical systems, and linear algebra},
+    %	author={Hirsch, Morris W and Devaney, Robert L and Smale, Stephen},
+    %	volume={60},
+    %	year={1974},
+    %	publisher={Academic press}
+    %}
+	%\end{thebibliography}
 \end{document}
+
