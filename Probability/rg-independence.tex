@@ -1,5 +1,29 @@
 \subsection{Independence}
 
+Independence is the first concept that has nontrivial meaning in probability other than inheriting measure theoretical names. 
+
+The independence is defined via the \(\sigma\)-algebras. Let \(\pqty{\Omega, \mathcal{F}, P}\) be a probability space. A collection of sub-\(\sigma\)-algebras \(\pqty{\mathcal{F}_{\alpha}}\) are independent if for all finite subcollection, for all \(F_{1}, F_{2}, \dots, F_{n} \in\mathcal{F}_{1}, \mathcal{F}_{2}, \dots \mathcal{F}_{n}\)
+\begin{equation*}
+    P\pqty{F_{1} F_{2}} = P(F_{1}) P(F_{2}) \dots P \pqty{F_{n}}
+\end{equation*}
+
+Can we extend this concept? For countable collection of sub-\(\sigma\)-algebras, \(\pqty{\mathcal{F}_{n}}\), it's \key{independency} if for any finite collection \(F_{j} \in \mathcal{F}_{j}\) we have 
+\begin{equation*}
+    P\pqty{\cap_{j}^{J} F_{j}} = \prod_{j} P \pqty{F_{j}}
+\end{equation*}
+
+What about uncountable, let's assume it can be defined in the same way. 
+
+There are several questions: can we find independency, how can we show that two \(\sigma\)-algebras are independent. 
+
+The use of independence is that if \(\sigma(X_{n})\) are independent, then we have for any measurable functions of \(X_{n}\), then we have 
+\begin{equation*}
+    \int f_{1}\pqty{X_{1}} f_{2}\pqty{X_{2}} \dots f_{n}\pqty{X_{n}} \dd{P} = \int f_{1}\pqty{X_{1}} \dd{P} \dots \int f_{n}\pqty{X_{n}} \dd{P}
+\end{equation*}
+
+This is related to the Fubini-Tonelli theorem in that we know the joint distribution will be the product measure of each distribution.
+
+The Kolmogorov's Extension Theorem asserts that we can find infinite sequence of independent random variables that are consistent on \textbf{nice} spaces. 
 \subsection{Law of Large Numbers}
 
 \subsection{Central Limit Theorem}
