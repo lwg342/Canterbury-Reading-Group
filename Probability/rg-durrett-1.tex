@@ -188,6 +188,9 @@ If \(f = f^{+} - f^{-}\) and the integrals of two nonnegative parts are not \(\i
 \begin{thm}[Littlewood's Second Principle]
     Measurable and integrable functions can be approximated by simple well-behaved functions.   
 \end{thm}
+\begin{thm}[Lusin's Theorem]
+    
+\end{thm}
 \begin{thm}[Properties of Integral]
     \begin{enumerate}
         \item Monotone \(\mu f \leq \mu g\) if \(f \leq g\) pointwise.
@@ -311,4 +314,7 @@ We relate the convergence of sets to the sum  of measures.
 \begin{proof}
     \(\sum \mu \pqty{E_{n}} < \infty\), meaning that \(\sum_{n > m} \mu E_{n} \to 0\) as \(m\to \infty\). Then for any \(\epsilon>0\) there exists \(m\) such that \(\mu\pqty{\limsup E_{n}} < \mu \pqty{\sup_{n>m} E_{n}} < \mu \pqty{\sum_{n>m} E_{n}} < \epsilon\). 
 \end{proof}
+\begin{remark}
+    Borel-Cantelli is useful for stong law of large numbers which turns the statement of \(\mu\Bqty{x: \lim \abs{f_{n} - f} (x) > \epsilon} = 0\) to \(\sum_{n} \mu\pqty{x: \abs{f_{n} - f} > \epsilon} < \infty\). 
+\end{remark}
 \subsection{\yellow{Differentiation}}
