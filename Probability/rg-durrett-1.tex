@@ -27,16 +27,22 @@ Given two measurable spaces, we can check whether a function \(X\) is measurable
     Let \(\mathcal{H}' = \Bqty{B\subset S\mid X^{-1}(B) \in \mathcal{F}}\), then we can show \(\mathcal{H}'\) is a \(\sigma\)-algebra because \(X^{-1}\) preserves complements and union. Then we have \(\mathcal{G} \subset \sigma(\mathcal{G}) = \mathcal{H} \subset \mathcal{H}'\), meaning that all \(H\in \mathcal{H}\) satisfies the condition.
 \end{proof}
 
+There are useful lemmas for checking a collection of subsets is indeed a \(\sigma\)-algebra. 
+
+\begin{lemma}[Dykin's \(\pi-\lambda\)]
+    If a \(p\)-system \(\mathcal{P}\) is contained in a \(\lambda\)-system \(\mathcal{D}\), then \(\sigma\pqty{\mathcal{P}} \subset \mathcal{D}\).
+\end{lemma}
+\begin{proof}
+    Let \(E\in \mathcal{}\)
+\end{proof}
+
+\begin{lemma}[Monotone Class Theorem]
+    
+\end{lemma}
+
 \begin{thm}[Open Sets on \(\mathbb{R}\)]
     Every open set \(U \subset \mathbb{R}\) is an at most countable union of disjoint open intervals. 
 \end{thm}
-\subsubsection{Distribution and Density}
-
-\key{Distribution} is the probability induced by a random variable \(X\), such that \(\mu(A) = P\pqty{X \in A}\). \key{Density} is defined via some methods(\yellow{To be added}). It's used to change measure, for example,
-\begin{equation*}
-    \int g(X) \dd{P} = \int g(x)f(x)\dd{x}
-\end{equation*}
-the latter being the Lebesgue integral over \(\mathbb{R}\) to be defined \yellow{later}.
 
 \subsubsection{Product Measure Space}
 
