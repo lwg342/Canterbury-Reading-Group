@@ -1,0 +1,51 @@
+This will collect the methods we used in the probability book.
+
+\section{Property Determining Class}
+
+\begin{method}[Measurability Determining]
+    
+\end{method}
+
+\begin{method}[Monotone Class Theorem]
+    
+\end{method}
+
+\begin{method}[\(\pi - \lambda\) Theorem]
+    
+\end{method}
+
+
+\begin{method}[Independence determined by \(\pi\)-systems]
+    
+\end{method}
+
+\begin{method}[Weak Convergence]
+    
+\end{method}
+
+\section{Thinning and Truncating}
+
+The purpose is to have a sequence that has better property than the original sequence. 
+
+\begin{method}[Cauchy's Condensation Test]
+    Let \((f(n))\) be a sequence of real numbers, then \(\sum f(n)\) converges iff \(\sum 2^{n} f(2^{n})\) converges.
+\end{method}
+\begin{proof}
+    
+\end{proof}
+
+\begin{method}[Thinning in Convergence in Topological Space]\label{method:thin-topology}
+    Let \(x_{n}\) be a sequence in a topological space \(\mathcal{X}\), then \(x_{n} \to x\) in that topology, iff for all subseqeunce of \(x_{n}\) there exists a further subsequence that converges to \(x\).
+\end{method}
+\begin{proof}
+    \(\implies\) is obvious. For the other direction, suppose \(x_{n}\) is not converging, then there exists an open neighbourhood \(\mathcal{N}\) of \(x\) such that for all \(N\), there exists \(n>N\), \(x_{n} \notin \mathcal{N}\), which will constitute a subsequence that has no further subsequence that converges.
+\end{proof}
+
+\begin{method}[Thinning and Control]
+    Let \(c_{n} \uparrow \infty\) be a sequence of constants, then \(X_{n} /c_{n} \to 1\) if we can find a subsequence that converges and \(c_{n+1}/c_{n} \to 1\).
+\end{method}
+
+\begin{method}[Truncating]
+    Let \(Y_{n} = X_{n} \mathbf{1}(X_{n} \leq M)\), then \(Y_{n}\) and \(X_{n}\) are equivalent iff \(P\pqty{Y_{n} \neq X_{n} i.o.} = 0\). 
+\end{method}
+

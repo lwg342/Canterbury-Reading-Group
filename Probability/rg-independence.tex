@@ -8,6 +8,8 @@ the latter being the Lebesgue integral over \(\mathbb{R}\) to be defined \yellow
 
 \subsection{Independence}
 
+\division{Definition}
+
 Independence is the first concept that has nontrivial meaning in probability other than inheriting measure theoretical names. 
 
 The independence is defined via the \(\sigma\)-algebras. Let \(\pqty{\Omega, \mathcal{F}, P}\) be a probability space. A collection of sub-\(\sigma\)-algebras \(\pqty{\mathcal{F}_{\alpha}}\) are independent if for all finite subcollection, for all \(F_{1}, F_{2}, \dots, F_{n} \in\mathcal{F}_{1}, \mathcal{F}_{2}, \dots \mathcal{F}_{n}\)
@@ -17,12 +19,29 @@ The independence is defined via the \(\sigma\)-algebras. Let \(\pqty{\Omega, \ma
 
 Can we extend this concept? For countable collection of sub-\(\sigma\)-algebras, \(\pqty{\mathcal{F}_{n}}\), it's \key{independency} if for any finite collection \(F_{j} \in \mathcal{F}_{j}\) we have 
 \begin{equation*}
-    P\pqty{\cap_{j}^{J} F_{j}} = \prod_{j} P \pqty{F_{j}}
+    P\pqty{\bigcap_{j}^{J} F_{j}} = \prod_{j} P \pqty{F_{j}}
 \end{equation*}
 
 What about uncountable, let's assume it can be defined in the same way. 
 
 There are several questions: can we find independency, how can we show that two \(\sigma\)-algebras are independent. 
+
+\division{Sufficient Condition for Independence}
+
+Let \(\mathcal{P}_{1}, \dots, \mathcal{P}_{n}\) be collections of measurable subsets, we say they are \textit{independent} if for all \(A_{k}\in \mathcal{P}_{k}\)
+\begin{equation*}
+    P\pqty{\cap A_{k} } = \prod_{k}^{n} P(A_{k})
+\end{equation*}
+
+\begin{thm}[\(\pi\)-system determines independence]
+    If \(\mathcal{P}_{k}\) are independent \(\pi\)-systems, then \(\sigma\pqty{\mathcal{P}_{k}}\) are independent. 
+\end{thm}
+
+\begin{proof}
+    Uses \(\pi- \lambda\) theorem.
+\end{proof}
+
+
 
 The use of independence is that if \(\sigma(X_{n})\) are independent, then we have for any measurable functions of \(X_{n}\), then we have 
 \begin{equation*}
@@ -34,10 +53,57 @@ This is related to the Fubini-Tonelli theorem in that we know the joint distribu
 The Kolmogorov's Extension Theorem asserts that we can find infinite sequence of independent random variables that are consistent on \textbf{nice} spaces. 
 
 
+\division{Borel-Cantelli's Lemmas}
+
+\begin{thm}[Borel-Cantelli's Lemma]
+    If \(\sum P(A_{n})< \infty\), then \(P\pqty{\limsup A_{n}} = P\pqty{A_{n} \text{ i.o.}} =0 \)
+\end{thm}
+
+As a result, we can upgrade convergence in probability to convergence a.s. 
+
+\begin{thm}
+    \(X_{n} \to X\) in probability iff for every subsequence of \(X_{n}\), there exists a further subsequence that converges to \(X\) almost surely. 
+\end{thm}
+\begin{proof}
+    If \(X_{n}\to X\) in probability, then \(P\pqty{\abs{X_{n} - X} \geq \epsilon} \to 0\), for any subsequence \(X_{n(k)}\) of \(X_{n}\), we can select a further subsequence \(X_{n(k(m))}\) such that \(P \pqty{\abs{X_{n} - X} \geq \epsilon} \leq \frac{1}{m^{2}}\). By Borel-Cantelli, we know \(X_{n(k(m))} \to X\) a.s. 
+
+    For the other direction, it's easy to show that \(X_{n} \to X\) a.s. implies \(X_{n}\to X\) in probability, then use thinning in topological space method, \autoref{method:thin-topology}. Because convergence in probability can be put in a metric.
+\end{proof}
+\begin{remark}
+    Notice that convergence almost surely is not a convergence in a topology. 
+\end{remark}
+
+For a sequence of sub-\(\sigma\)-algebras \(\mathcal{F}_{n} \subset \mathcal{F}\), let \(\mathcal{F}'_{m} = \sigma\pqty{\cup_{n\geq m} \mathcal{F}_{n}}\) the \key{tail \(\sigma\)-algebra} \(\mathcal{T}\) is defined as \(\cap_{m}^{\infty} \mathcal{F}'_{m}\). It's the \(\sigma\)-algebra that contains the events about the limits. 
+
+For independent \(\sigma\)-algebras, the tail \(\sigma\)-algebra is simple, by the Kolmogorov's 0-1 law. 
+
+\begin{thm}[Kolmogorov's 0-1 Law]
+    
+\end{thm}
 \subsection{Law of Large Numbers}
+
+\division{Weak Law of Large Numbers}
+
+\key{Truncation} or \key{equivalent sequence} will be important for our purpose because it guarantees the existence of moments. Let \(X_{1},\dots, X_{n}\) be a sequence of random variables. Let \(Y_{n} = X_{n}\mathbf{1}_{X_{n} \leq M}\). Then Chebyshev's inequlaity will be used.
+
+\begin{thm}[Weak Law of Large Numbers]
+    Suppose \(X_{n}\) are a sequence of random variables, satisfying that \(X_{n}\)
+    \begin{enumerate}
+        \item \(\sum_{k} P \pqty{X_{n} \geq k} < \infty\);
+        \item 
+    \end{enumerate}
+\end{thm}
+
+\division{Strong Law of Large Numbers}
 
 \subsection{Convergence of Random Series}
 
-\subsection{Characteristic Functions}
+The \key{Kronecker's Lemma} provides a bridge between convergence of series and the strong law of large numbers. 
+\begin{lemma}[Kronecker's Lemma]
+    If \(\sum \frac{a_{n}}{b_{n}} < \infty\) and \(b_{n} \uparrow \infty\), then \(\frac{1}{b_{n}} \sum a_{n} \to 0\) a.s.
+\end{lemma}
+
+
+
 
 \subsection{Central Limit Theorem}
