@@ -1,0 +1,20 @@
+Ergodicity is about the intrinsic law. Let's consider discrete time, let \(T\) be a \key{measure-preserving} transformation on \((\Omega, \mathcal{F}, P)\), \(T : \omega \mapsto T\pqty{\omega}\) such that \(\forall A \in \mathcal{F}\), \(P\pqty{T(A)} = P(A)\). 
+
+\begin{thm}[von Neumann Mean Ergodic Theorem]
+    Let \(f\in L^{p}\pqty{\Omega, \mathcal{F}, P}\), if \(T\) is a measure preserving trasformation, then as \(n \to \infty\) 
+    \begin{equation*}
+        \frac{1}{n+1} \sum^{n}_{i= 0} f\circ T^{i}\to_{L_{p}} E\pqty{f \mid \mathcal{I}}
+    \end{equation*}
+    If \(T\) is \key{ergodic}, then \(\mathcal{I}\) is trivial and the conditional expectation is equal to the unconditional expectation almost surely. 
+\end{thm}
+\begin{proof}
+    \begin{enumerate}
+        \item von Neumann proved the convergence as a property in Hilbert space and projections. 
+        \item \(L^{2}\) is a Hilbert space and the projection is conditional expecation. 
+        \item We can extend to \(L^{p}\) because we have a finite measure space, \(L^{\infty}\) is dense subset of \(L^{2}\).  
+    \end{enumerate}
+\end{proof}
+
+\begin{thm}[Birkhoff Individual Ergodic Theorem]
+    The convergence holds also almost surely. 
+\end{thm}
