@@ -1,0 +1,35 @@
+From an epsilon of room
+
+Fourier transform + fourier inversion formula. Useful for using group structure. Superposition. 
+
+Consider an \key{abelian topological group} \((G, +)\) that is also locally compact Hausdorff. \(C_{c}(G)\) of continuous compactly supported complex-valued functions. 
+
+We have the translation action \(x \mapsto \tau_{x}\) of \(G\) on \(C_{c}(G)\). \yellow{see group theory}. 
+\begin{equation*}
+    \tau_{x} f(y) = f(y-x)
+\end{equation*}
+
+\begin{defn}[Characters]
+    Multiplicative character \(\chi\) is a continuous function \(G\to S^{1}\) that \(\chi(x+y) = \chi(x)\chi(y) \). An additive character \(\xi\) is a continuous function \(G \to \mathbb{R}/\mathbb{Z}\) that is homomorphism. 
+\end{defn}
+
+\blue{See Oxford Harmonic Lecture Notes}. 
+
+\begin{defn}[Fourier Transform]
+    for \(f \in L^{1}(G)\) define the fourier transform 
+    \(\hat{f} : \hat{G} \to \mathbb{C}\) as 
+    \begin{equation*}
+        \hat{f}(\xi) := \int_{G} f(x) e^{-2\pi i \xi\cdot x} \dd{\mu(x)}
+    \end{equation*}
+\end{defn}
+
+\begin{thm}[Riemann-Lebesgue]
+    If \(f \in L^{1}(G)\) then \(\hat{f} : \hat{G} \to \mathbb{C}\) is continuous and for \(\epsilon\), exists  compact \(K\) such that \(\abs{\hat{f}\pqty{\xi} } \leq \epsilon\) for \(\xi \notin K\).  
+\end{thm}
+
+\section{Convolution}
+\section{On compact Abelian group}
+
+\section{on \tmath{\mathbb{R}^{d}}}
+
+\section{Inversion}
