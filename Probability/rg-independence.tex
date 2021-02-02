@@ -53,26 +53,6 @@ This is related to the Fubini-Tonelli theorem in that we know the joint distribu
 The Kolmogorov's Extension Theorem asserts that we can find infinite sequence of independent random variables that are consistent on \textbf{nice} spaces. 
 
 
-\division{Borel-Cantelli's Lemmas}
-
-\begin{thm}[Borel-Cantelli's Lemma]
-    If \(\sum P(A_{n})< \infty\), then \(P\pqty{\limsup A_{n}} = P\pqty{A_{n} \text{ i.o.}} =0 \)
-\end{thm}
-
-As a result, we can upgrade convergence in probability to convergence a.s. 
-
-\begin{thm}
-    \(X_{n} \to X\) in probability iff for every subsequence of \(X_{n}\), there exists a further subsequence that converges to \(X\) almost surely. 
-\end{thm}
-\begin{proof}
-    If \(X_{n}\to X\) in probability, then \(P\pqty{\abs{X_{n} - X} \geq \epsilon} \to 0\), for any subsequence \(X_{n(k)}\) of \(X_{n}\), we can select a further subsequence \(X_{n(k(m))}\) such that \(P \pqty{\abs{X_{n} - X} \geq \epsilon} \leq \frac{1}{m^{2}}\). By Borel-Cantelli, we know \(X_{n(k(m))} \to X\) a.s. 
-
-    For the other direction, it's easy to show that \(X_{n} \to X\) a.s. implies \(X_{n}\to X\) in probability, then use thinning in topological space method, \autoref{method:thin-topology}. Because convergence in probability can be put in a metric.
-\end{proof}
-\begin{remark}
-    Notice that convergence almost surely is not a convergence in a topology. 
-\end{remark}
-
 For a sequence of sub-\(\sigma\)-algebras \(\mathcal{F}_{n} \subset \mathcal{F}\), let \(\mathcal{F}'_{m} = \sigma\pqty{\cup_{n\geq m} \mathcal{F}_{n}}\) the \key{tail \(\sigma\)-algebra} \(\mathcal{T}\) is defined as \(\cap_{m}^{\infty} \mathcal{F}'_{m}\). It's the \(\sigma\)-algebra that contains the events about the limits. 
 
 For independent \(\sigma\)-algebras, the tail \(\sigma\)-algebra is simple, by the Kolmogorov's 0-1 law. 
@@ -80,7 +60,10 @@ For independent \(\sigma\)-algebras, the tail \(\sigma\)-algebra is simple, by t
 \begin{thm}[Kolmogorov's 0-1 Law]
     
 \end{thm}
+
 \subsection{Law of Large Numbers}
+
+For the weak laws we need to control for \(P\pqty{S_{n} \geq \epsilon \delta(n)}\). Moment can be used(Chebyshev). For the strong law we can use the Borel-Cantelli lemma. 
 
 \division{Weak Law of Large Numbers}
 
