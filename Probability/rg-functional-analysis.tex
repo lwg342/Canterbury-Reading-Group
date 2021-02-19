@@ -1,4 +1,23 @@
+\section{Zorn's Lemma and Hahn-Banach Theorem}
+
+Let \((\mathcal{X},\leq)\) be a partially ordered set, a \key{maximal element} of \(\mathcal{X}\) is \(x\) such that for all \(y\in X\), if comparable, \(y\leq x\). 
+
+\begin{thm}[Zorn's Lemma]
+    Equivalent to the Axiom of Choice, if every totally ordered subset \(\mathcal{Y}\subset \mathcal{X}\) has a maximal element, then there exists a maximal element of \(\mathcal{X}\).
+\end{thm}
+
+\begin{thm}[Hahn Banach's Theorem]
+    A feature of the dual spaces. 
+\end{thm}
+
+\begin{corollary}[Geometric Hahn Banach's Theorem]
+    
+\end{corollary}
+
+\section{Riesz-Kakutani, Weak* Convergence and Weak Convergence}
+
 \section{\tmath{L^{p}} Spaces}
+
 
 Let \(f: (\Omega, \mathcal{F}, \mu) \to \mathbb{C}\) be a \(\mathcal{F}\)-measurable function, let \([f]:= \Bqty{g \in \mathcal{F}, g = f, a.e.}\), for \(1 \leq p < \infty\), define \(\norm{g}_{p} = \pqty{\int_{\Omega} \abs{g}^{p} \dd{\mu}}^{\frac{1}{p}} < \infty\)
 \begin{equation*}
@@ -9,7 +28,7 @@ We define \(\norm{f}_{\infty} = \esssup \abs{f} = \inf \Bqty{c: \mu\Bqty{\abs{f}
 
 That \(\norm{f}_{p}\) is indeed a norm is given by the Minkowski's inequality. 
 
-\section{Dual Space of \tmath{L^{p}}}
+\subsection{Dual Space of \tmath{L^{p}}}
 
 For any \key{bounded linear functional} \(T : L^{p} \to \mathbb{F}\), there exists \(g \in L^{q}\), where \(q\) is the conjugate, such that 
 \begin{equation*}

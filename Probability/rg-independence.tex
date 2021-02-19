@@ -1,4 +1,4 @@
-\subsection{Distribution and Density}
+\section{Distribution and Density}
 
 \key{Distribution} is the probability induced by a random variable \(X\), such that \(\mu(A) = P\pqty{X \in A}\). \key{Density} is defined via some methods(\yellow{To be added}). It's used to change measure, for example,
 \begin{equation*}
@@ -6,9 +6,9 @@
 \end{equation*}
 the latter being the Lebesgue integral over \(\mathbb{R}\) to be defined \yellow{later}.
 
-\subsection{Independence}
+\section{Independence}
 
-\division{Definition}
+\subsection{Definition}
 
 Independence is the first concept that has nontrivial meaning in probability other than inheriting measure theoretical names. 
 
@@ -26,7 +26,7 @@ What about uncountable, let's assume it can be defined in the same way.
 
 There are several questions: can we find independency, how can we show that two \(\sigma\)-algebras are independent. 
 
-\division{Sufficient Condition for Independence}
+\subsection{Sufficient Condition for Independence}
 
 Let \(\mathcal{P}_{1}, \dots, \mathcal{P}_{n}\) be collections of measurable subsets, we say they are \textit{independent} if for all \(A_{k}\in \mathcal{P}_{k}\)
 \begin{equation*}
@@ -61,11 +61,11 @@ For independent \(\sigma\)-algebras, the tail \(\sigma\)-algebra is simple, by t
     
 \end{thm}
 
-\subsection{Law of Large Numbers}
+\section{Law of Large Numbers}
 
 For the weak laws we need to control for \(P\pqty{S_{n} \geq \epsilon \delta(n)}\). Moment can be used(Chebyshev). For the strong law we can use the Borel-Cantelli lemma. 
 
-\division{Weak Law of Large Numbers}
+\subsection{Weak Law of Large Numbers}
 
 \key{Truncation} or \key{equivalent sequence} will be important for our purpose because it guarantees the existence of moments. Let \(X_{1},\dots, X_{n}\) be a sequence of random variables. Let \(Y_{n} = X_{n}\mathbf{1}_{X_{n} \leq M}\). Then Chebyshev's inequlaity will be used.
 
@@ -77,9 +77,9 @@ For the weak laws we need to control for \(P\pqty{S_{n} \geq \epsilon \delta(n)}
     \end{enumerate}
 \end{thm}
 
-\division{Strong Law of Large Numbers}
+\subsection{Strong Law of Large Numbers}
 
-\subsection{Convergence of Random Series}
+\section{Convergence of Random Series}
 
 The \key{Kronecker's Lemma} provides a bridge between convergence of series and the strong law of large numbers. 
 \begin{lemma}[Kronecker's Lemma]
@@ -89,4 +89,4 @@ The \key{Kronecker's Lemma} provides a bridge between convergence of series and 
 
 
 
-\subsection{Central Limit Theorem}
+\section{Central Limit Theorem}
