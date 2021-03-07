@@ -1,7 +1,107 @@
+\subsection{Martingale, Stopping Time, Martingale Transforms}
+
 Conditional expectation is very important, it's a way to capture the dependence among random variables.
 
 We begin with the definition of \key{filtration}. A filtration is a collection of sub-\(\sigma\)-algebra of \((\Omega, \mathcal{F}, P)\), such that 
 \begin{equation*}
-    \mathcal{F}_{n} \uparrow \mathcal{F}
+    \mathcal{F}_{n} \subset \mathcal{F}_{n+1}
 \end{equation*}
 It represents the accumulation of information over time. 
+
+\begin{defn}[Martingales]
+    An adapted stochastic process \((X_{t}, \mathcal{F}_{t})\) is a sub-martingale, if \(X_{t} \in L^{1}\) and 
+    \begin{equation*}
+        E\pqty{X_{t+1}\mid X_{t}} \geq X_{t} \qq{a.s.}
+    \end{equation*}
+    We write \(\mathbb{M}_{\uparrow}\) for the class of submartingales, \(\mathbb{M}^{s}\) for super-martingales. 
+\end{defn}
+
+We say \(H_{t}\) is a \key{predictable process}, if \(H_{t} \in \mathcal{F}_{t-1}\). And we define the \key{martingale transform} of \(H_{t}\), (similar to integration notation) as 
+\begin{equation*}
+    X^{t}(H_{t}) := \sum_{t=1}^{t} H_{t}(X_{t} - X_{t-1})
+\end{equation*}
+
+\subsection{Transformations that Preserves Martingale}
+
+For \textbf{nondecreasing} convex \(\phi\), because \(E(\phi(X)) \geq \phi(E(X))\), we know \(\phi(\mathbb{M}_{\uparrow}) \in \mathbb{M}_{\uparrow}\), implicitly we require \(\phi(X_{t}) \in L^{1}\) for all \(t\). 
+
+\subsection{Martingale Inequalities}
+
+We can control the (expected) number of sub-martingales crossing an interval by the expectation of the end value of the sub-martingale. 
+\begin{lemma}[Doob's Upcrossing Inequality]
+    Let \(U_{T}(a,b)\) be the number of upcrossings of \([a,b]\) completed before time \(T\) by \(X_{t} \in \mathbb{M}_{\uparrow}\), then 
+    \begin{equation*}
+        E(U_{T}(a,b)) \leq (b-a)\bqty{E(X_{n} - a)_{+} - E(X_{0} - a)_{+}}
+    \end{equation*}
+\end{lemma}
+\begin{proof}
+    Consider the Buy-and-hold until upcrossing is completed strategy \(H_{t}\). Calculate the expected return. 
+\end{proof}
+
+We have a result for martingale that is similar to the \key{Kolmogorov's Maximal Inequality}. 
+\begin{lemma}[\(\mathbb{M}_{\uparrow}\) Maximal Inequality]
+    For \(X_{t} \in \mathbb{M}\). 
+    \begin{equation*}
+        P\pqty{\max_{1\leq t \leq T} X_{t} \geq \epsilon} \leq E\pqty{X_{T} \indicator{\max_{t\leq T} X_{t} \geq \epsilon }}/ \epsilon
+    \end{equation*}
+\end{lemma}
+\begin{proof}
+    Use the crossing idea that's used in proving Kolmogorov's inequality. 
+\end{proof}
+
+A corolloary is
+\begin{lemma}[Doob's \(L^{p}\) inequality]
+    If \(X_{t} \in \mathbb{M}\), then for \(p > 1\), 
+    \begin{equation*}
+        \norm{X_{T} }_{p} \leq \norm{\max_{1 \leq t\leq T} \abs{X_{t}}}_{p} \leq q \norm{X_{T}}_{p}
+    \end{equation*}
+\end{lemma}
+\begin{proof}
+    Use \(EX = \int x P(X > x) \dd{x}\), the \(\mathbb{M}_{\uparrow}\) maximal inequality for \(\abs{X_{t}}^{p}\), which is in \(\mathbb{M}_{\uparrow}\),  and Hölder. 
+\end{proof}
+
+
+The Buckholder's inequality relate the \(L^{p}\) norm of a martingale to the partiial sum of squared MDS. 
+\begin{lemma}[Buckholder's Inequality]
+    
+\end{lemma}
+
+\subsection{Martingale Convergence Theorems}
+An easy way to show a sequence of random variables converges almost surely and in \(L^{p}\). 
+
+\begin{thm}[Martingale convergence theorem]
+    Let \(X_{t} \in \mathbb{M}_{\uparrow}\), then if \(\sup_{t} E\abs{X_{t}} \leq \infty\), 
+\end{thm}
+
+\begin{thm}[Martingale \(L^{p}\) Convergence]
+    
+\end{thm}
+
+\key{Uniform integrability condition}. 
+\begin{thm}[Martingale \(L^{1}\) convergence]
+    
+\end{thm}
+
+\subsection{Martingale Law of Large Numbers}
+See Hall and Hyde, talks about conditions under which \(b_{n}^{-1} X_{n} \to 0\)  in probability, a.s., or in \(L^{p}\), where \(b_{n}\) can be random norming and \(X_{n}\) can be mixingales. 
+
+\subsection{Martingale Central Limit Theorems}
+
+\begin{thm}
+    Under the following conditions for a martingale array \(S_{ni}\), and \(X_{n}\) being the MDS. 
+    \begin{enumerate}
+        \item Asymptotically negligible differences: \(\max \abs{X_{i}} \to_{p} 0\)
+        \item Conditional variance condition: \(\sum X_{i}^{2} \goto{p} \eta^{2}\)
+        \item Bounded \(E(\max_{i} X_{ni}^{2})\). 
+    \end{enumerate}
+    We have (stable) convergence of martingale \(S_{n} \rightsquigarrow_{s} Z\). Where \(\rightsquigarrow \) means convergence stably. 
+\end{thm}
+
+\subsection{Applications}
+
+\subsubsection{Mixingales}
+See p.19 of Hall and Hyde, it includes uniform mixing sequence, linear process, etc. 
+
+\subsubsection{U-statistics}
+
+\subsubsection{Estimation from Stochastic Processes}

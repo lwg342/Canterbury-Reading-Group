@@ -1,0 +1,26 @@
+\newcommand{\mbp}{\mathbb{P}}
+\newcommand{\mbg}{\mathbb{G}}
+\section{Set Up}
+Given iid sample \(x_{1},\dots, x_{n}\), let \(\mbp_{n}:\mathcal{F}\mapsto \mathbb{R}\) be defined as 
+\begin{equation*}
+    \mbp_{n}(f) = \frac{1}{n} \sum_{i}^{n} f(x_{i}); \mbg_{n}(f) = \sqrt{n} (\mbp_{n} - P)(f)
+\end{equation*}
+
+we are concerned with 
+\begin{enumerate}
+    \item \(\norm{\mbp_{n} - p}_{\mathcal{F}} \to 0\). 
+    \item when \(\sup_{\mathcal{F}}  \mbg_{n}(f) < \infty\), \(\mbg_{n} \rightsquigarrow \mbg\) for some tight stochastic process \(\mbg\), in \(l^{\infty}(\mathcal{F})\). 
+\end{enumerate}
+
+\begin{lemma}
+    We need to establish 1. asymptotic equicontinuity:
+    \begin{equation*}
+        \lim_{\delta\downarrow 0}\limsup_{n} P^{*}\pqty{\norm{\mbg_{n}}_{\mathcal{F}_{\delta}} > \epsilon} = 0
+    \end{equation*}
+    2. totally bounded \(\mathcal{F}\). For \(\mbg\) to exist. 
+\end{lemma}
+
+\section{Uniform Entropy Method}
+
+
+\section{Bracketing Method}
